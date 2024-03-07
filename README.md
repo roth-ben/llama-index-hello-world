@@ -9,7 +9,7 @@ Here you'll learn how to,
 
 Imagine you have a handful of documents - like emails, articles, or code. LlamaIndex lets you ask questions about these documents, just like you would ask ChatGPT a question, but pretend ChatGPT just read everything in your documents!
 
-There are a nubmer of ways do this, we will be focusing on the third method due 
+There are a number of ways do this, we will be focusing on the third method due 
 
 1. Fine-tune your own large language model (LLM): This is like teaching an intelligent program to understand your documents. It's powerful, but takes a lot of time, expertise, computing power, and money.
 2. Bunch up all of your content and feed everything into your LLM: You could just copy and paste all your documents into a question for a regular LLM to answer. This might work now, but it's slow and expensive and there are not too many LLMs available that support such large contexts to begin with.
