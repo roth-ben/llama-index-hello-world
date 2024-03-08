@@ -1,10 +1,10 @@
-# llama-index-hello-world
-This hello world tutorial will help you begin your journey in learning how to train your LLM models on customer data using the LlamaIndex data framework.
+# LlamaIndex Hello World (Dockerized)
+This hello world tutorial will help you begin your journey in learning how to train your favorite LLM models on custom data using the LlamaIndex data framework.
 
 ## What you will learn
 Here you'll learn how to,
 - [ ] Setup your very first LlamaIndex environment on Docker
-- [ ] Sharpen your Python skills in context to utilizing LLMs
+- [ ] Sharpen your Python skills in relation to utilizing LLMs
 - [ ] Develop a basic understanding and architecture of training your LLMs
 
 Imagine you have a handful of documents - like emails, articles, or code. LlamaIndex lets you ask questions about these documents, just like you would ask ChatGPT a question, but pretend ChatGPT just read everything in your documents!
