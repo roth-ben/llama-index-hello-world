@@ -13,23 +13,23 @@ from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.openai import OpenAIEmbedding
 
 if __name__ == "__main__":
-    # initialize Pinecone
+    # Initialize Pinecone
     pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
     pinecone_index = pc.Index(name=os.environ["PINECONE_INDEX"])
     vector_store = PineconeVectorStore(pinecone_index=pinecone_index)
 
-    # debug LLM callback
+    # Debug LLM callback
     llama_debug = LlamaDebugHandler(print_trace_on_end=True)
     callback_manager = CallbackManager(handlers=[llama_debug])
     Settings.callback_manager = callback_manager
 
-    # initialize LlamaIndex vector store
+    # Initialize LlamaIndex vector store
     index = VectorStoreIndex.from_vector_store(vector_store=vector_store)
 
-    # query LLM
+    # Query your LLM
     query = "What is a LlamaIndex query engine?"
     query_engine = index.as_chat_engine()
     response = query_engine.query(query)
 
-    # print response
+    # Print response
     print(response)

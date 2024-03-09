@@ -1,5 +1,8 @@
 from dotenv import load_dotenv
 import os
+
+load_dotenv()
+
 from llama_index.core import SimpleDirectoryReader, Settings
 from llama_index.core.node_parser import SimpleNodeParser
 from llama_index.llms.openai import OpenAI
@@ -8,10 +11,8 @@ from llama_index.core import VectorStoreIndex, StorageContext
 from llama_index.vector_stores.pinecone import PineconeVectorStore
 from pinecone import Pinecone
 
-load_dotenv()
-
 if __name__ == "__main__":
-    print("Begin ingesting documentation into the Pinecode DB...")
+    print("Ingestion process started...")
     from llama_index.readers.file import UnstructuredReader
 
     dir_reader = SimpleDirectoryReader(
@@ -38,4 +39,5 @@ if __name__ == "__main__":
         storage_context=storage_context,
         show_progress=True,
     )
-    print("Ingestion completed!")
+
+    print("Ingestion process completed!")

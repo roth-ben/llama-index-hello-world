@@ -4,7 +4,6 @@ import os
 import urllib
 
 # The URL to scrape
-ur0 = "https://gpt-index.readthedocs.io/en/stable/"
 url = "https://docs.llamaindex.ai/en/stable/"
 
 # The directory to store files in
@@ -23,7 +22,7 @@ links = soup.find_all("a", href=True)
 for link in links:
     href = link["href"]
 
-    # If it's a .html file
+    # Filter for .html files
     if href.endswith(".html"):
         # Make a full URL if necessary
         if not href.startswith("http"):
