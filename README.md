@@ -23,12 +23,14 @@ We'll be using the Anaconda Python environment so be sure to follow the [install
 
 Go ahead and clone this git repository,
 
-`git clone https://github.com/roth-ben/llama-index-hello-world.git`
+```shell
+git clone https://github.com/roth-ben/llama-index-hello-world.git
+```
 
 ### Conda and Python Package Dependencies
 Now you'll install the necessary dependencies in Python. Enter these into your terminal,
 
-```
+```shell
 conda create -n llama-index python=3.10.13 anaconda
 conda activate llama-index
 conda install openai python-dotenv -y
@@ -38,7 +40,7 @@ pip install llama-index pinecone-client llama-index-vector-stores-pinecone "unst
 ### API Keys
 We'll be working with both the OpenAI LLMs and embeddings, and Pinecone's online vector database. You'll need to create new API keys for both. On Pinecone, you'll also need to create a new index. Now open the *.env* file in your newly created local folder and enter in the API keys, index names, and Pinecone regional environment you've created your index in.
 
-```
+```shell
 OPENAI_API_KEY=
 PINECONE_ENVIRONMENT=
 PINECONE_INDEX=
@@ -49,7 +51,7 @@ PINECONE_API_KEY=
 ### Gather your Training Data
 For this tutorial we're simply going to download the LlamaIndex website HTML files. We're going to train our LLM on the data available on their website so we can ask questions about the LlamaIndex framework. To do this you can simply run,
 
-```
+```shell
 python download_docs.py
 ```
 
@@ -72,7 +74,7 @@ Once the above ingestion process is complete, we can start to query our LLM usin
 
 Execute the main Python file to run the query,
 
-```
+```shell
 python main.py
 ```
 
